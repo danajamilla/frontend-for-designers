@@ -23,7 +23,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Opdracht 1 plan
 
 <details open>
-  <summary>uitwerken na schetsen idee (voor week 2)</summary>
+  <summary>Ik wil het logo van Disney gaan animeren. Ik heb een idee om het logo per letter te laten verschijnen en als het lukt met een soort sparkle over de letters. Als het logo tekstueel compleet is, verschijnt er een element die Mickey Mouse voorstelt. Dit element wordt met een animatie verkleind richting het puntje van de i. Wanneer het element ongeveer op dezelfde grootte als het puntje van de i is, zal deze transformeren naar het oorspronkelijke puntje van de i van het font. </summary>
 
 
   ### Je storyboard:
