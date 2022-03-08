@@ -4,14 +4,12 @@
 /* FONTS */
 /*********/
 @font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
-	font-weight: normal;
+    font-family: 'waltographregular';
+    src: url('../fonts/waltograph42-webfont.woff2') format('woff2'),
+         url('../fonts/waltograph42-webfont.woff') format('woff');
+    font-weight: normal;
 	font-style: normal;
-
 }
-
 
 
 
@@ -47,11 +45,118 @@ button, summary {
 /****************/
 /* JOUW STYLING */
 /****************/
+
+
+
+
+/****************/
+	/* BODY */
+/****************/
 body {
-  font-family:eenfont, sans-serif;
-  color:var(--color-main);
-  background-color:var(--color-background);
+	font-family: 'waltographregular';
+	font-size: 5em;
+	font-weight: lighter;
+  	color:var(--color-main);
+	background-color:var(--color-background);
 }
 
-/* jouw code */
+/****************/
+/* MICKEY MOUSE */
+/****************/
 
+div:nth-of-type(1) {
+	background-color: #111;
+	border-radius: 50%;
+}
+
+/****************/
+/* SHIMMER & FADE */
+/****************/
+
+@keyframes shimmer-animation {	/* code sanne: https://codepen.io/shooft/pen/WNXRROo?editors=1100 */
+	0% {
+	  background-position:left bottom;
+	}
+	100% {
+	  background-position:right top;
+	}
+  }
+
+  @keyframes fade-in {	/* https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ */
+	from {
+		opacity:0;
+}
+
+	to {
+		opacity:1;
+	}
+  }
+
+/****************/
+/* ALLE LETTERS */
+/****************/
+
+section h1 span {				/* code sanne: https://codepen.io/shooft/pen/WNXRROo?editors=1100 */
+	background-image: linear-gradient(
+		45deg,
+		#BF953F,
+		#FCF6BA,
+		#B38728,
+		#FBF5B7,
+		#AA771C
+		);
+
+	background-size:200% 200%;
+	background-clip:text;
+	-webkit-background-clip:text;
+	color:transparent;
+	/* animation:shimmer-animation 1s linear infinite ; */
+	/* animation-play-state:running; */
+	opacity: 0;
+}
+
+/****************/
+/* PER LETTER */
+/****************/
+
+section h1 span:nth-of-type(1) {
+	animation-duration: 2s;
+	animation-delay: 0s;
+	animation-name: fade-in;
+	animation-fill-mode: forwards;
+  }
+
+section h1 span:nth-of-type(2) {
+	animation-duration: 2s;
+	animation-delay: 1s;
+	animation-name: fade-in;
+	animation-fill-mode: forwards;
+  }
+
+  section h1 span:nth-of-type(3) {
+	animation-duration: 2s;
+	animation-delay: 2s;
+	animation-name: fade-in;
+	animation-fill-mode: forwards;
+  }
+
+  section h1 span:nth-of-type(4) {
+	animation-duration: 2s;
+	animation-delay: 3s;
+	animation-name: fade-in;
+	animation-fill-mode: forwards;
+  }
+
+  section h1 span:nth-of-type(5) {
+	animation-duration: 2s;
+	animation-delay: 4s;
+	animation-name: fade-in;
+	animation-fill-mode: forwards;
+  }
+
+  section h1 span:nth-of-type(6) {
+	animation-duration: 2s;
+	animation-delay: 5s;
+	animation-name: fade-in;
+	animation-fill-mode: forwards;
+  }
