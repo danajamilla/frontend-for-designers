@@ -14,9 +14,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 ## Bronnenlijst
-  1. -bron 1-
-  2. -bron 2-
-  3. -...-
+  1. https://codepen.io/shooft/pen/WNXRROo?editors=1100 
+  2. https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/
+  3. https://codepen.io/shooft/pen/WNXRROo?editors=1100
 
 
 
