@@ -32,10 +32,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Animeren
  
 </details>
 
@@ -52,15 +49,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+  Ik ben helaas wegens mijn gezondheid weinig aanwezig geweest bij de lessen. Dit vind ik jammer, want ik vind het een heel leuk vak. In de les dat ik er was, ben ik begonnen met mijn logo animatie. Ik heb deze les best veel gedaan! Ik heb het font gevonden, gedownload en geimporteerd. Ik moest even nadenken hoe het ookalweer werkte met fontface en dergelijke, maar uiteindelijk is het vrij snel gelukt. Vervolgens ben ik begonnen met de letters 1 voor 1 laten verschijnen. Daarna heb ik er een gouden gradient overheen gedaan en die een soortvan laten loopen. Dit lijkt nu op een shimmer die over het logo heen gaat, ik ben blij met het resultaat!
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  <img src="readme-images/disney-logo-animatie.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
+  Ik zou graag nog het puntje van de i willen laten veranderen in een mickey mouse silhouette, alleen weet ik nog niet zo goed hoe ik dit moet aanpakken. 
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  <!-- <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer"> -->
 </details>
 
 
