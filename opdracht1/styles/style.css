@@ -36,6 +36,7 @@ button, summary {
 	/* startje */
 	--color-main:#111;
 	--color-background:#eee;
+	--color-sparkle: rgb(255, 217, 0);
 }
 
 
@@ -54,33 +55,30 @@ button, summary {
 /****************/
 body {
 	font-family: 'waltographregular';
-	font-size: 5em;
+	font-size: 14vmin; 				/* code sanne*/
 	font-weight: lighter;
-  	color:var(--color-main);
+	color:var(--color-main);
 	background-color:var(--color-background);
+
+	height:100vh;
+	display:grid;
+	place-items:center;			/*code sanne*/
 }
 
 /****************/
-/* MICKEY MOUSE */
-/****************/
-
-div:nth-of-type(1) {
-	background-color: #111;
-	border-radius: 50%;
-}
-
-/****************/
-/* SHIMMER & FADE */
+/* KEYFRAMES */
 /****************/
 
 @keyframes shimmer-animation {	/* code sanne: https://codepen.io/shooft/pen/WNXRROo?editors=1100 */
 	0% {
-	  background-position:left bottom;
+	  background-position:left center;
 	}
 	100% {
-	  background-position:right top;
+	  background-position:right center;
 	}
   }
+
+  
 
   @keyframes fade-in {	/* https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ */
 	from {
@@ -92,27 +90,57 @@ div:nth-of-type(1) {
 	}
   }
 
+  @keyframes zoom-out { /* https://codepen.io/vaishali1192/pen/QWdJZVy */
+	0% {
+		transform: scale(1.5);
+	  }
+
+	  100% {
+		transform: scale(.35);
+	  }
+	}
+
+  
+/******/
+/* H1 */
+/******/
+
+h1 {
+	display:flex;
+}
+
 /****************/
 /* ALLE LETTERS */
 /****************/
 
-section h1 span {				/* code sanne: https://codepen.io/shooft/pen/WNXRROo?editors=1100 */
+section h1 span {				
+	/* code sanne: https://codepen.io/shooft/pen/WNXRROo?editors=1100 */
 	background-image: linear-gradient(
 		45deg,
-		#BF953F,
+		#BF953F 45%,
 		#FCF6BA,
 		#B38728,
 		#FBF5B7,
-		#AA771C
+		#BF953F 55%
 		);
 
-	background-size:200% 200%;
+	background-size:800% 100%;
 	background-clip:text;
 	-webkit-background-clip:text;
 	color:transparent;
-	/* animation:shimmer-animation 1s linear infinite ; */
-	/* animation-play-state:running; */
 	opacity: 0;
+
+	/* een comma zodat hij beide animaties pakt en niet maar 1*/
+	animation-name: fade-in, shimmer-animation;
+	animation-iteration-count: 1, infinite; /*zo lang speelt hij de animatie af voordat hij stopt*/
+	animation-duration: 2s, 3.5s;  /* animatie is klaar in 2s, 3.5s*/
+	animation-fill-mode: forwards;  /*bepaalt waar de animatie eindigd*/
+	animation-timing-function: linear; /*de manier hoe de animatie afspeelt*/
+
+	/* letters 2tm6 want D is groter */
+	display: block;
+	width: 10vmin;  /*code sanne*/
+	text-align: center;
 }
 
 /****************/
@@ -120,43 +148,74 @@ section h1 span {				/* code sanne: https://codepen.io/shooft/pen/WNXRROo?editor
 /****************/
 
 section h1 span:nth-of-type(1) {
-	animation-duration: 2s;
-	animation-delay: 0s;
-	animation-name: fade-in;
-	animation-fill-mode: forwards;
+	/* deze letter is breder */
+	width: 20vmin;  /*code sanne */
+	background-size: 400% 100%; /*halve breedte want letter is 2x zo breed*/
+
+	animation-delay: 0s, 0s;   /*beide animaties 0s? */
   }
 
 section h1 span:nth-of-type(2) {
-	animation-duration: 2s;
-	animation-delay: 1s;
-	animation-name: fade-in;
-	animation-fill-mode: forwards;
+	/* voor de shimmer een negatieve delay - animatie start dan verder in de animatie */
+	/* een portie = animatietijd delen door 7 --> 3.5s / 7 --> .5s */
+	/* i krijgt 2 porties omdat de D 2x zo breed is */
+	animation-delay: 1s, -1s;
   }
 
   section h1 span:nth-of-type(3) {
-	animation-duration: 2s;
-	animation-delay: 2s;
-	animation-name: fade-in;
-	animation-fill-mode: forwards;
+	/* nu elke keer 1 portie*/
+	animation-delay: 2s, -1.5s;
   }
 
   section h1 span:nth-of-type(4) {
-	animation-duration: 2s;
-	animation-delay: 3s;
-	animation-name: fade-in;
-	animation-fill-mode: forwards;
+	animation-delay: 3s, -2s;
   }
 
   section h1 span:nth-of-type(5) {
-	animation-duration: 2s;
-	animation-delay: 4s;
-	animation-name: fade-in;
-	animation-fill-mode: forwards;
+	animation-delay: 4s, -2.5s;
   }
 
   section h1 span:nth-of-type(6) {
-	animation-duration: 2s;
-	animation-delay: 5s;
-	animation-name: fade-in;
-	animation-fill-mode: forwards;
+	animation-delay: 5s, -3s;
   }
+
+/****************/
+/* MICKEY MOUSE */
+/****************/
+
+/* https://www.youtube.com/watch?v=HCe6dwlfMwE */
+
+.mickey::before {
+	content: '';
+	position: absolute;
+	top: 30%;  /* positie van het puntje van de i*/
+	left: 45%;
+	transform: translate(-50%, -50%);
+	width: 250px;
+	height: 250px;
+	
+	background-image: radial-gradient(90px 90px at 24% 20%, black 50%, transparent 50%), /*linker oor*/
+	radial-gradient(90px 90px at 76% 20%, black 50%, transparent 50%), /*rechter oor*/
+	radial-gradient(160px 160px at center, black 50%, transparent 50%); /*gezicht*/
+
+	animation: zoom-out 2.5s ease-out;
+	animation-fill-mode: forwards; /* animatie blijft op dezelfde plek waar hij stopt*/
+	animation-delay: 6s;
+}
+
+.mickey {
+	top: 2em;
+}
+
+/* .mickey::after {
+	content: '';
+	position: absolute;
+	top: 52%;
+	left: 50%;
+	transform: translate(-50%);
+	height: 50px;
+	width: 70px;
+	border-radius: 50%;
+	background: deeppink;
+	box-shadow: inset 0 -4px 0 0 yellow;
+} */
