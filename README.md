@@ -45,8 +45,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <!-- <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitomst opdracht 1"> -->
-
 
   ### Dit ging goed/Heb ik geleerd: 
   Ik ben helaas wegens mijn gezondheid weinig aanwezig geweest bij de lessen. Dit vind ik jammer, want ik vind het een heel leuk vak. In de les dat ik er was, ben ik begonnen met mijn logo animatie. Ik heb deze les best veel gedaan! Ik heb het font gevonden, gedownload en geimporteerd. Ik moest even nadenken hoe het ookalweer werkte met fontface en dergelijke, maar uiteindelijk is het vrij snel gelukt. Vervolgens ben ik begonnen met de letters 1 voor 1 laten verschijnen. Daarna heb ik er een gouden gradient overheen gedaan en die een soortvan laten loopen. Dit lijkt nu op een shimmer die over het logo heen gaat, ik ben blij met het resultaat!
@@ -55,9 +53,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit was lastig/Is niet gelukt:
-  Ik zou graag nog het puntje van de i willen laten veranderen in een mickey mouse silhouette, alleen weet ik nog niet zo goed hoe ik dit moet aanpakken. 
+  Ik zou graag nog het puntje van de i willen laten veranderen in een mickey mouse silhouette. De mickey mouse heb ik gemaakt en de animatie zit er op. Het enige wat nog niet lukt is dat hij voordat de animatie begint niet in beeld moet staan. Daarnaast verspringt hij ook van positie zodra de animatie begint en dat is niet de bedoeling.
 
-  <!-- <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer"> -->
+  <img src="readme-images/disney-logo-animatie-2.png" width="375px" alt="top">
+
+
 </details>
 
 

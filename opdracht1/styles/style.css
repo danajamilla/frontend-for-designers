@@ -1,5 +1,7 @@
 /* CSS Document */
 
+
+
 /*********/
 /* FONTS */
 /*********/
@@ -37,6 +39,24 @@ button, summary {
 	--color-main:#111;
 	--color-background:#eee;
 	--color-sparkle: rgb(255, 217, 0);
+	--color-gradient: linear-gradient(
+		45deg,
+		#BF953F 45%,
+		#FCF6BA,
+		#B38728,
+		#FBF5B7,
+		#BF953F 55% );
+	--color-gold: #B38728;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+
+        --color-background:#111;
+
+    }
+
 }
 
 
@@ -90,16 +110,6 @@ body {
 	}
   }
 
-  @keyframes zoom-out { /* https://codepen.io/vaishali1192/pen/QWdJZVy */
-	0% {
-		transform: scale(1.5);
-	  }
-
-	  100% {
-		transform: scale(.35);
-	  }
-	}
-
   
 /******/
 /* H1 */
@@ -115,14 +125,7 @@ h1 {
 
 section h1 span {				
 	/* code sanne: https://codepen.io/shooft/pen/WNXRROo?editors=1100 */
-	background-image: linear-gradient(
-		45deg,
-		#BF953F 45%,
-		#FCF6BA,
-		#B38728,
-		#FBF5B7,
-		#BF953F 55%
-		);
+	background-image: var(--color-gradient);
 
 	background-size:800% 100%;
 	background-clip:text;
@@ -160,6 +163,7 @@ section h1 span:nth-of-type(2) {
 	/* een portie = animatietijd delen door 7 --> 3.5s / 7 --> .5s */
 	/* i krijgt 2 porties omdat de D 2x zo breed is */
 	animation-delay: 1s, -1s;
+	position: relative;
   }
 
   section h1 span:nth-of-type(3) {
@@ -185,37 +189,34 @@ section h1 span:nth-of-type(2) {
 
 /* https://www.youtube.com/watch?v=HCe6dwlfMwE */
 
-.mickey::before {
-	content: '';
-	position: absolute;
-	top: 30%;  /* positie van het puntje van de i*/
-	left: 45%;
-	transform: translate(-50%, -50%);
-	width: 250px;
-	height: 250px;
-	
-	background-image: radial-gradient(90px 90px at 24% 20%, black 50%, transparent 50%), /*linker oor*/
-	radial-gradient(90px 90px at 76% 20%, black 50%, transparent 50%), /*rechter oor*/
-	radial-gradient(160px 160px at center, black 50%, transparent 50%); /*gezicht*/
-
+.mickey {
 	animation: zoom-out 2.5s ease-out;
 	animation-fill-mode: forwards; /* animatie blijft op dezelfde plek waar hij stopt*/
 	animation-delay: 6s;
-}
 
-.mickey {
-	top: 2em;
-}
-
-/* .mickey::after {
-	content: '';
 	position: absolute;
-	top: 52%;
-	left: 50%;
-	transform: translate(-50%);
-	height: 50px;
-	width: 70px;
-	border-radius: 50%;
-	background: deeppink;
-	box-shadow: inset 0 -4px 0 0 yellow;
-} */
+	top: 27%;  /* positie van het puntje van de i*/
+	left: 52%;
+	transform: translate(-50%, -50%) scale(20);
+	width: 250px;
+	height: 250px;
+	
+	background-image: radial-gradient(90px 90px at 24% 20%,var(--color-gold) 50%, transparent 50%), /*linker oor*/
+	radial-gradient(90px 90px at 76% 20%, var(--color-gold) 50%, transparent 50%), /*rechter oor*/
+	radial-gradient(160px 160px at center,var(--color-gold) 50%, transparent 50%); /*gezicht*/
+
+	opacity: 0%;
+}
+
+@keyframes zoom-out { /* https://codepen.io/vaishali1192/pen/QWdJZVy */
+	0% {
+		transform: translate(-50%, -50%) scale(20);
+		opacity: 20%;
+	  }
+
+	  100% {
+		transform: translate(-50%, -50%) scale(.6);
+		opacity: 100%;
+
+	  }
+	}
