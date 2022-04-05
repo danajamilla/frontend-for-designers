@@ -129,6 +129,10 @@ Voor opdracht 2 wil ik een soort quote generator maken waarbij je motiverende qu
   
  <img src="readme-images/slepen.png" width="375px" alt="bevinding-4-slepen">
 
+ Uiteindelijk ben ik deze week aardig vooruit gegaan. Hieronder is mijn eerste versie van mijn site te zien!
+
+  <img src="readme-images/opdracht2-versie1.jpeg" width="375px" alt="site-versie1">
+
 </details>
 
 
@@ -139,6 +143,8 @@ Voor opdracht 2 wil ik een soort quote generator maken waarbij je motiverende qu
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
+  Na de eerste versie heb ik zeker nog dingen aangepast. Ik vond het toch nog wat statisch en saai, het moest naar mijn mening iets levendiger. Daarom heb ik er uiteindelijk voor gekozen om met bloemen en bladeren te werken, zo krijgt het iets meer warmte en karakter! 
+  
   <img src="readme-images/final-design.png" width="375px" alt="uitkomst opdracht 2">
 
 
