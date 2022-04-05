@@ -1,5 +1,4 @@
-// JavaScript Document
-console.log("welkom");
+console.log("welcome");
 
 // buttons aanspreken
 var buttonLike  = document.querySelector("button#like");
@@ -9,17 +8,17 @@ buttonLike.addEventListener("click", quoteLiken);
 buttonHate.addEventListener("click", quoteHaten);
 
 function quoteLiken() {
-    nieuweQuote();
-    updateWishlist();
+    newQuote();
+    updateFavorites();
 }
 
 function quoteHaten() { 
-    nieuweQuote();
+    newQuote();
 }
 
 
 // quotelijst
-var quoteLijst = [
+var quoteList = [
     "Keep going, because you did not come this far to come this far", 
     "The struggle is the part of the journey", 
     "Dreams don't work unless you do",
@@ -31,45 +30,45 @@ var quoteLijst = [
     "Don't give up, the beginning is always the hardest"
 ];
 
-function nieuweQuote() {
+function newQuote() {
     var pElement = document.querySelector("p"); 
-    var randomQuote = Math.random()*quoteLijst.length;
+    var randomQuote = Math.random()*quoteList.length;
     
     randomQuote = Math.floor(randomQuote);
-    pElement.textContent = quoteLijst[randomQuote];
-    
-    // console.log(quoteLijst[0]);
+    pElement.textContent = quoteList[randomQuote];
 }
 
 // app openen
-nieuweQuote();
+newQuote();
 
-
-
-/* de Wishlist in de nav in de header updaten */
-/* de action die meegegeven wordt, is "plus" of "min" */
-function updateWishlist() {
-  /* het getal (de span) in de Wishlist-link in de nav opzoeken */
-  /* die span in de variabele 'loveListAmount' opslaan */
-  let wishlistAmount = document.querySelector("div button#like span");
+// optellen bij klikken op de like button
+function updateFavorites() {
+  let favoriteAmount = document.querySelector("h2");
+  let currentAmount = favoriteAmount.innerHTML;
   
-  /* het huidige aantal gele hartjes bepalen */
-  let currentAmount = wishlistAmount.innerHTML;
-  /* dat is een string - dus even omzetten naar een getal */
   currentAmount = parseInt(currentAmount);
+
+  let newAmount = currentAmount + 1; //bij elke klik komt er +1 bij
   
-  /* het nieuwe aantal gele hartjes bepalen */
-  /* te beginnen met een variabele om het nieuwe aantal in op te slaan */
-  let newAmount = currentAmount + 1;
-  
-  /* tenslotte het nieuwe aantal in de HTML zetten */
-  wishlistAmount.innerHTML = newAmount;
+  favoriteAmount.innerHTML = newAmount; //het nieuwe getal wordt in de html gezet
 }
 
-// swipen
+// navigeren dmv swipen
+var theQuote = document.querySelector('.quote'); //ophalen uit html
 
-var deQuote = document.querySelector('.quote');
+var theQuoteHammer = new Hammer(theQuote); //code sanne
+theQuoteHammer.on("swipeleft", quoteLiken); //als je links swiped, voert hij like functie uit
+theQuoteHammer.on("swiperight", quoteHaten); //als je rechts swiped, voert hij hate functie uit
 
-var deQuoteHammer = new Hammer(deQuote);
-deQuoteHammer.on("swipeleft", quoteLiken);
-deQuoteHammer.on("swiperight", quoteHaten);
+
+// navigeren dmv linker en rechter toetsenbord knop
+document.addEventListener("keydown", keyPressed);
+
+function keyPressed(event) {
+    if (event.code == "ArrowRight"){    //als je op toetsenbord pijl rechts klikt, voert hij hate functie uit
+        quoteHaten();
+    }
+    else if (event.code == "ArrowLeft"){   //en anders als je op toetsenbord pijl links klikt, voert hij like functie uit
+        quoteLiken();
+    }
+}
