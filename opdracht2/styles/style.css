@@ -12,10 +12,6 @@
 
 }
 
-
-
-
-
 /**************/
 /* CSS REMEDY */
 /**************/
@@ -27,31 +23,170 @@ button, summary {
 	cursor: pointer;
 }
 
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-main:#111;
-	--color-background:#eee;
+	--color-main:rgb(0, 0, 0);
+	--color-dark-purple: #393767;
+	--color-light-purple: #AEADEA;
+	--color-background:#F7F8FF;
 }
 
+/* dark mode */ 
+@media (prefers-color-scheme: dark) {
+
+    :root {
+		--color-background: #393767;
+		--color-main: #F7F8FF;
+    }
+
+}
+
+/* responsive */
+@media (min-width:38em) { body { padding:3vw; } }
+@media (min-width:57em) { body { padding:2.5vw; } }
 
 
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
+/************/
+/*   BODY  */
+/***********/
 body {
-  font-family:eenfont, sans-serif;
-  color:var(--color-main);
-  background-color:var(--color-background);
+	font-family: 'Poppins', sans-serif;  color:var(--color-main);	 
+
+	background: rgb(247,248,255);
+	background: radial-gradient(circle, rgba(247,248,255,1) 0%, rgba(193,197,226,1) 100%);
+	background-size:200% 200%;    /* 2x zo breed en hoog als element*/
+	background-position:left bottom;    /* de background staat nu linksonder en steekt rechtsboven uit*/
+
+	animation-name:gradient-animation;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-iteration-count: infinite;
 }
 
-/* jouw code */
+@keyframes gradient-animation {
+	0% {
+	  background-position:left bottom;
+	}
+	100% {
+	  background-position:right top;
+	}
+  }
 
+h1 {
+	text-align: center;
+	color: var(--color-dark-purple);
+}
+
+/***********/
+/* QUOTES */
+/**********/
+
+p.quote {  /*blok van de quotes*/
+	border: 5px solid var(--color-light-purple);
+
+	text-align: center;
+	padding: 0 3em;
+	margin: 1em 1.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+	min-height: 10em;
+}
+
+p.quote::before, p.quote::after {   /* de aanhalingstekens */
+	content: '"';
+	position: absolute;
+
+	font-size: 10em;
+	height: .3em;
+	line-height: 1em;	
+	background-color: var(--color-background);
+	color: var(--color-dark-purple);
+}
+
+p.quote::before {      /* de aanhalingstekens > linksboven */
+	left: -.05em;
+	top: -.05em;
+}
+
+p.quote::after {       /* de aanhalingstekens > rechtsonder */
+	right: -.05em;
+	bottom: -.05em;
+}
+
+/************/
+/* BUTTONS */
+/***********/
+
+body div:nth-of-type(1) { /*div om buttons*/
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+body button:nth-of-type(1) img, button:nth-of-type(2) img {
+	width: 8em;
+}
+
+button#like, button#hate {
+	border:none;
+	background-color: var (var(--color-background));
+	cursor: pointer; 
+}
+
+button#like span {
+	color: var(--color-light-purple);
+	background-color: var(--color-dark-purple);
+
+    position: absolute;
+    left: 11.2em;
+    bottom: 40.5em;
+    min-width: 1.25em;
+    padding: 0 .25em;
+
+    border-radius: .625em;
+    font-size: 1em;
+    text-align: center;
+    line-height: 1.25em;
+}
+
+/* animatie like button */
+@keyframes bounce-animation {
+	0% { transform: scale(1); }      
+	5% { transform: scale(.7); }     /* eerst kleiner */
+	10% { transform: scale(1.5); }   /* dan groter */
+	15% { transform: scale(.7); }
+	20% { transform: scale(1.5); }
+	25% { transform: scale(.7); }
+	30% { transform: scale(1); }     /* vanaf nu doet de animatie 70% van de tijd niks, zo creer je een pauze */
+	100% { transform: scale(1); }
+  }
+  
+  button#like:hover img {
+	animation-name:bounce-animation;
+	animation-duration:2s;
+	animation-iteration-count:infinite;
+	will-change:transform;
+  }
+
+  /* animatie hate button */
+  @keyframes spin-animation {
+	0% {
+	  transform:rotate(0);
+	}
+	100% {
+	  transform:rotate(360deg);
+	}
+
+	0% {
+		transform:rotate(0);
+	  }
+  }
+  
+ button#hate:hover img {
+	animation: spin-animation 1s infinite linear;
+  }
