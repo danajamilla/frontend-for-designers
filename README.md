@@ -145,9 +145,6 @@ Voor opdracht 2 wil ik een soort quote generator maken waarbij je motiverende qu
   ### Dit ging goed/Heb ik geleerd: 
   Ik vond het een uitdaging, maar wel weer heel leuk. Ik moet altijd even zoeken hoe ik het beste kan beginnen, maar eenmaal begonnen, ga ik graag met hoog tempo door. Ik vind het tof dat ik iets meer (simpele) javascript heb geleerd. Zo weet ik nu hoe je met javascript kunt navigeren met slepen, maar ook met je pijltjes toetsen. Ook heb ik code toegepast die ik al eerder gedaan heb, dit was weer een goed moment om mijn geheugen daarin op te frissen. Ik ben blij met het eindresultaat!
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
-
-
   ### Dit was lastig/Is niet gelukt:
   Wat ik vaak moeilijk vind is om in het begin de styling nog even weg te laten. Ik ben gek op ontwerpen, waardoor ik hier te vaak te vroeg mee begin. Het resulteert tot te veel tijd besteden aan het mooi maken van een pagina in plaats van alle benodigde content eerst te implementeren. Het is weer een leer les om hier op te letten en de css in het begin even links te laten liggen. Qua functies is alles wel gelukt wat ik wilde, dus dat is natuurlijk heel fijn!
 
