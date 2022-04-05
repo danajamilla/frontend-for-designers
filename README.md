@@ -57,6 +57,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   <img src="readme-images/disney-logo-animatie-2.png" width="375px" alt="top">
 
+  Note: na even te zitten met Sanne is dit ook gelukt, woehoe! 
 
 </details>
 
@@ -67,17 +68,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details>
   <summary>uitwerken na schetsen idee (voor week 4)</summary>
 
+Voor opdracht 2 wil ik een soort quote generator maken waarbij je motiverende quotes te zien krijgt. Als je de quote leuk vindt en hij motiveert je, kun je de quote 'liken'. Wanneer de quote je niet genoeg motiveert, kun je de quote 'disliken'. In beide gevallen zul je een nieuwe quote krijgen.
 
   ### Je ontwerp:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="ontwerp opdracht 2">
+  <img src="readme-images/opdracht2-uitleg.png" width="375px" alt="ontwerp opdracht 2">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - ik wil weer oefenen met animeren
+  - javascript beter onder de knie krijgen
+
 </details>
 
 
@@ -88,27 +89,46 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na testen (week 6/7)</summary>
 
   Neem minimaal 5 bevindingen op:
+  - hoveren
+  - dark mode
+  - navigeren met toetsenbord
+  - navigeren met slepen
 
 
 
-  ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
-
-  #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
-
-
-  ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  ### Bevinding 1: hover werkt niet
+  Ik wilde mijn design zo maken dat als je hovert over de buttons, een animatie afspeelt. Ik begreep maar niet waarom het hoveren niet werkte, ik dacht toch echt de code goed te hebben.
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+ Uiteindelijk kwam ik er achter dat ik in de mobile inspector modus zat, hier werkt de hover niet want met een mobiel kun je natuurlijk ook niet hoveren. Een klein stom foutje dus! Na in een andere modus te zijn gegaan werkte de hover gelukkig gewoon goed. 
+
+ <img src="readme-images/code-hoveren.png" width="375px" alt="bevinding-1-hoveren">
+
+  ### Bevinding 2: dark mode instellen
+  Wanneer mijn site een beetje goed werkte, moest ik nog de dark modus instellen. Ik vind het altijd lastig om na te denken welke kleur veranderd in welke kleur. Wanneer ik er echt even niet meer uit komt test ik het gewoon uit en pas ik aan de hand daarvan de kleuren aan.
+
+  #### oplossing:
+  Om ervoor te zorgen dat de dark modus werkte, heb ik een @media prefers-color-scheme aangemaakt. Hierbij heb ik dus de lichtere kleuren omgezet naar donkere kleuren en andersom hetzelfde. Tegenwoordig gebruiken veel mensen dark modus, dus het is heel goed om dit bij je website toe te passen. Zo kan iedere gebruiker optimaal genieten van je site.
+
+ <img src="readme-images/dark-mode.png" width="375px" alt="bevinding-2-darkmode">
 
 
+  ### Bevinding 3: navigeren met toetsenbord
+  Een van de eisen is dat de gebruiker zowel met muis/touch kan navigeren als met toetsenbord. Gelukkig hebben we dit vrijwel aan het begin van opdracht 2 met Sanne in de les geoefend, hierdoor wist ik al wat beter hoe ik moest beginnen. 
 
-  ### Bevinding 3:
-  ...
+   #### oplossing:
+   Een deel van de code kon ik hergebruiken. Ik moest in javascript werken met if en if else. ALS de rechterpijl toets is ingedrukt, voert hij de quoteHaten functie uit. EN ANDERS kun je met de linkerpijl toets ervoor zorgen dat hij de quoteLiken functie uitvoert. Op deze manier kun je gemakkelijk navigeren met je toetsen!
+  
+ <img src="readme-images/toetsen.png" width="375px" alt="bevinding-3-toetsen">
+
+  ### Bevinding 4: navigeren met slepen
+  Ook is een van de eisen dat de gebruiker met touch kan navigeren, bijvoorbeeld met slepen. Ik vond dit wat lastiger, ik had het zelf nog nooit gedaan. Door mee te kijken met de uitleg en andere studenten, heb ik uiteindelijk de code voor elkaar gekregen.
+
+   #### oplossing:
+   Navigeren met slepen doe je met javascript met 'Hammer'. Ik heb hier zelf nog nooit eerder van gehoord, maar het implementeren ging vrij soepel. Ik moest twee dingen ophalen uit de html: de quotes en Hammer. Vervolgens moest ik aangeven wat er moet gebeuren als je links veegt en als je rechts veegt.
+  
+ <img src="readme-images/slepen.png" width="375px" alt="bevinding-4-slepen">
+
 </details>
 
 
@@ -119,17 +139,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/final-design.png" width="375px" alt="uitkomst opdracht 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+  Ik vond het een uitdaging, maar wel weer heel leuk. Ik moet altijd even zoeken hoe ik het beste kan beginnen, maar eenmaal begonnen, ga ik graag met hoog tempo door. Ik vind het tof dat ik iets meer (simpele) javascript heb geleerd. Zo weet ik nu hoe je met javascript kunt navigeren met slepen, maar ook met je pijltjes toetsen. Ook heb ik code toegepast die ik al eerder gedaan heb, dit was weer een goed moment om mijn geheugen daarin op te frissen. Ik ben blij met het eindresultaat!
 
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
+  Wat ik vaak moeilijk vind is om in het begin de styling nog even weg te laten. Ik ben gek op ontwerpen, waardoor ik hier te vaak te vroeg mee begin. Het resulteert tot te veel tijd besteden aan het mooi maken van een pagina in plaats van alle benodigde content eerst te implementeren. Het is weer een leer les om hier op te letten en de css in het begin even links te laten liggen. Qua functies is alles wel gelukt wat ik wilde, dus dat is natuurlijk heel fijn!
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
 </details>
