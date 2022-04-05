@@ -1,17 +1,5 @@
 /* CSS Document */
 
-/*********/
-/* FONTS */
-/*********/
-@font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-
-}
-
 /**************/
 /* CSS REMEDY */
 /**************/
@@ -38,7 +26,8 @@ button, summary {
 
     :root {
 		--color-background: #393767;
-		--color-main: #F7F8FF;
+		--color-dark-purple: #F7F8FF;
+		--color-light-purple: #393767;
     }
 
 }
@@ -134,13 +123,12 @@ body button:nth-of-type(1) img, button:nth-of-type(2) img {
 
 button#like, button#hate {
 	border:none;
-	background-color: var (var(--color-background));
 	cursor: pointer; 
 }
 
 button#like span {
 	color: var(--color-light-purple);
-	background-color: var(--color-dark-purple);
+	background-color: transparent;
 
     position: absolute;
     left: 11.2em;
