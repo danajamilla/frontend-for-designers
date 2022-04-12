@@ -8,6 +8,7 @@ buttonLike.addEventListener("click", quoteLiken);
 buttonHate.addEventListener("click", quoteHaten);
 
 function quoteLiken() {
+   //code favorietenlijst 
     newQuote();
     updateFavorites();
 }
@@ -71,4 +72,30 @@ function keyPressed(event) {
     else if (event.code == "ArrowLeft"){   //en anders als je op toetsenbord pijl links klikt, voert hij like functie uit
         quoteLiken();
     }
+}
+
+// favorieten lijst functie
+const favoButton = document.querySelector("button.favo");
+const textInside = document.querySelector("p");
+const theFavoList = document.querySelector("ul");
+
+
+// voeg toe aan favorieten
+buttonLike.addEventListener("click", addTextToList);
+
+function addTextToList() {
+	var newTextInside = textInside.cloneNode(true);
+	
+	var newLi = document.createElement("li");
+	
+	newLi.appendChild(newTextInside);
+	
+	theFavoList.appendChild(newLi);
+}
+
+// favo lijst knop
+favoButton.addEventListener("click", toggleMenu);
+
+function toggleMenu() {
+	theFavoList.classList.toggle("menuOpen");
 }

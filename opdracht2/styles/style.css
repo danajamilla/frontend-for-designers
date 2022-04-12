@@ -22,6 +22,7 @@ button, summary {
 	--color-background:#F7F8FF;
 	--color-white: #fff; 
 	--color-gradient: radial-gradient(circle, rgba(247,248,255,1) 0%, rgba(193,197,226,1) 100%);
+	--color-favo-button: #B75E95;
 }
 
 /* dark mode */ 
@@ -33,6 +34,7 @@ button, summary {
 		--color-background: #393767;
 		--color-white: #fff;
 		--color-gradient: radial-gradient(circle, rgb(97, 56, 130) 0%,rgb(159, 45, 188) 100%);
+		--color-favo-button: #E88DC2;
     }
 }
 
@@ -183,4 +185,63 @@ section h2 {        /*de opteller*/
   
  button#hate:hover img {
 	animation: spin-animation 1s infinite linear;
+}
+
+/************/
+/* favo quotes */
+/***********/
+ul {
+	position:fixed;
+	right:0;
+	left:0;
+	top:50%;
+	bottom:0;
+	
+	margin:0;
+	padding:1em;
+	
+	background-color:var(--color-white);
+	list-style:none;
+	
+	display:grid;   /* quotes komen onder elkaar met een gat (gap) */
+	gap:1em;
+	align-content:start;
+	
+	transform:translatey(100%);   /* de favolijst zie je niet, staat onderaan de pagina */
+	transition:.3s;
+	
+	overflow:auto;
+}
+
+ul:empty::after {    /* als de lijst leeg is, zie je dit */
+	content:"Nog geen motiverende quote gezien 😩";
+
+	font-size: 1.5em;
+	text-align: center;
+	margin-top: 7em;
+}
+
+
+ul.menuOpen {
+	transform:translatey(0);   /* favolijst is in beeld */
+	z-index: 50;    /* favolijst staat boven de andere elementen */
+}
+
+li {
+	background-color: var(--color-secundairy);
+	color: var(--color-white);
+	padding:1em;
+}
+
+button.favo {
+	background-color: var(--color-white);
+	border:none;
+	border-radius: .5em;
+	padding: 1em;
+	font-weight: 600;
+
+	position:fixed;
+	right:1em;
+	bottom:1em;
+	z-index:100;
 }
